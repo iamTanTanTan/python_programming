@@ -14,7 +14,7 @@ f(n) = f(n-1) + f(n-2)。显然我们也知道f(1)=1,f(2) = 2.
 '''
 
 class Solution:
-    def vectCover1(self, number):
+    def vectCover1(self, number): # 方法一
         a = 1
         b = 2
         if number == 1:
@@ -25,13 +25,13 @@ class Solution:
             a, b = b, a + b
         return b
     
-    def vectCover2(self, number):
+    def vectCover2(self, number): # 方法二
         res = [1, 2] #resizable array
         while len(res) <= number:
             res.append(res[-1] + res[-2])
         return res[number-1]
     
-    def vectCover3(self, number):
+    def vectCover3(self, number): # 方法三
         res = [1, 2] #resizable array
         if number >= 3:
             for i in range(3, number+1):

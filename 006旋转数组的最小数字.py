@@ -26,7 +26,7 @@ class Solution:
         if rotateArray[front] < rotateArray[rear]:
             return rotateArray[front]
         else:
-            while rear - front > 1: # 至少三个元素
+            while rear - front > 1: # 三个以上元素的情况
                 mid = (front + rear)//2
                 if rotateArray[rear] < rotateArray[mid]:
                     front = mid

@@ -23,7 +23,7 @@ f(n) = | 2, (n=2)
                
 class Solution:
                
-    def jumpFloor1(self, number):
+    def jumpFloor1(self, number): # 方法一
         res = [1, 2]  #resizable array
         while len(res) <= number:
             res.append(res[-1] + res[-2])
@@ -33,7 +33,7 @@ class Solution:
         return res[number-1]
         
         
-    def jumpFloor2(self, number):
+    def jumpFloor2(self, number): # 方法二
         res=[1,2] #resizable array
         if number >=3:
             for _ in range(number+1):
@@ -41,7 +41,7 @@ class Solution:
         return res[number-1]
             
                   
-    def jumpFloor3(self, number): #方法2
+    def jumpFloor3(self, number): #方法三
         res = [1, 2]  #resizable array
         if number >= 3:
             for i in range(3, number+1):

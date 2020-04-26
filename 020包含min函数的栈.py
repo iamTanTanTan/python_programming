@@ -25,7 +25,7 @@ class Solution:
         if self.stack == [] or self.minStack == []:
             return None
         self.minStack.pop()
-        self.stack
+        self.stack.pop()
 
     def top(self):
         return self.stack[-1]

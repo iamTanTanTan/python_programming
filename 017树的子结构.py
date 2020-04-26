@@ -23,11 +23,11 @@ class Solution:
     def HasSubtree(self, pRoot1, pRoot2):
         result = False
         if pRoot1 != None and pRoot2 != None: #当Tree1和Tree2都不为零的时候，才进行比较。否则直接返回false
-            if pRoot1.val == pRoot2.val:
-                result = self.DoesTree1haveTree2(pRoot1, pRoot2)                
-            if not result:
+            if pRoot1.val == pRoot2.val: #如果找到了对应Tree2的根节点的点
+                result = self.DoesTree1haveTree2(pRoot1, pRoot2) #以这个根节点为为起点判断是否包含Tree2                
+            if not result: #如果找不到，那么就再去root的左儿子当作起点，去判断时候包含Tree2
                 result = self.DoesTree1haveTree2(pRoot1.left, pRoot2)
-            if not result:
+            if not result: #如果还找不到，那么就再去root的右儿子当作起点，去判断时候包含Tree2
                 result = self.DoesTree1haveTree2(pRoot1.right, pRoot2)
         return result
     

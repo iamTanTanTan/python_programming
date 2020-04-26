@@ -22,7 +22,7 @@ class Solution:
             return matrix
         res = []
         while matrix:
-            #取第一行存入res同时消除matrix第一行
+            #取第一行存入res同时删除matrix第一行
             res += matrix.pop(0)
             # res.extend(matrix[0])
             # matrix.remove(matrix[0])

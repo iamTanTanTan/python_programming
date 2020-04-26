@@ -36,7 +36,7 @@ class Solution:
             return True
         if pRoot1 == None: #如果Tree2还没有遍历完，Tree1却遍历完了。返回false
             return False
-        if pRoot1.val != pRoot2.val: # 如果根节点的值不相等，返回false
+        if pRoot1.val != pRoot2.val: # 如果其中有一个点没有对应上，返回false
             return False
         
         #如果根节点对应的上，那么就分别去子节点里面匹配

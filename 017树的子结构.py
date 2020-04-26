@@ -22,7 +22,7 @@ class TreeNode:
 class Solution:
     def HasSubtree(self, pRoot1, pRoot2):
         result = False
-        if pRoot1 != None and pRoot2 != None:
+        if pRoot1 != None and pRoot2 != None: #当Tree1和Tree2都不为零的时候，才进行比较。否则直接返回false
             if pRoot1.val == pRoot2.val:
                 result = self.DoesTree1haveTree2(pRoot1, pRoot2)                
             if not result:

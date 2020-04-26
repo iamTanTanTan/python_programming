@@ -39,7 +39,7 @@ class Solution:
         if pRoot1.val != pRoot2.val: #如果其中有一个点没有对应上，返回false
             return False
         
-        #如果根节点对应的上，那么就分别去子节点里面匹配
+        #如果根节点对应的上，那么就判断左右子节点是否同时相等
         return self.DoesTree1haveTree2(pRoot1.left, pRoot2.left) and self.DoesTree1haveTree2(pRoot1.right, pRoot2.right)
          
                 

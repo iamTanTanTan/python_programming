@@ -32,11 +32,11 @@ class Solution:
         return result
     
     def DoesTree1haveTree2(self, pRoot1, pRoot2):
-        if pRoot2 == None: # 如果Tree2已经遍历完了都能对应的上，返回true
+        if pRoot2 == None: #如果Tree2已经遍历完了都能对应的上，返回true
             return True
         if pRoot1 == None: #如果Tree2还没有遍历完，Tree1却遍历完了。返回false
             return False
-        if pRoot1.val != pRoot2.val: # 如果其中有一个点没有对应上，返回false
+        if pRoot1.val != pRoot2.val: #如果其中有一个点没有对应上，返回false
             return False
         
         #如果根节点对应的上，那么就分别去子节点里面匹配

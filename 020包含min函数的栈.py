@@ -1,5 +1,5 @@
 '''
-我们可以设计两个栈：stack和minStack，一个就是普通的栈，另外一个存储push进来的最小值。
+我们可以设计两个栈：stack和minStack，stack就是普通的栈，minStack用来存储push进来的最小值。
 首先是push操作：
 第一个元素同时压入两个栈中，此后每次压入的数据newNum都push进Stack中，
 然后比较newNum与minStack栈顶元素的大小，如果newNum较小，则同步将newNum压入minStack中,

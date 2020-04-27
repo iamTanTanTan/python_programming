@@ -26,7 +26,7 @@ class Solution:
         index = 0
 
         '''
-        下面这个for循环特别需要主要index=i必须写在if语句外面,
+        下面这个for循环特别需要注意index=i必须写在if语句外面,
         否则就会发生当root结点前的所有元素小于root的时候, 正确判断应该为True,
         但是因为if语句没有进入, index = 0 ,
         在进入二叉搜索树的右子树结点大于根结点的for循环的时候, 因为sequence的数都小于root, 就会判断出错

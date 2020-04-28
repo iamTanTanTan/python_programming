@@ -22,8 +22,7 @@ class Solution:
             else:
                 return []
         # 对左右子树所有结点依次判断
-        a = self.findPath(root.left, sum-root.val) + \
-            self.findPath(root.right, sum-root.val)
+        a = self.findPath(root.left, sum-root.val) + self.findPath(root.right, sum-root.val)
         # 找到符合要求的叶结点后按照相反路径将其根结点依次插在前面
         return [[root.val] + i for i in a]
 

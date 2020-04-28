@@ -14,7 +14,7 @@ class Solution:
     # 返回二维列表，内部每个列表表示找到的路径
     def findPath(self, root, sum):
         if not root:
-            return []
+            return None
         if root.left == None and root.right == None:
             if sum == root.val:
                 # 注意这里如果写成一维列表，则返回的是符合要求的路径值的和而非路径值

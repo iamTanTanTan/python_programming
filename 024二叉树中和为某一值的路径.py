@@ -20,6 +20,7 @@ class Solution:
                 # 注意这里如果写成一维列表，则返回的是符合要求的路径值的和而非路径值
                 return [[root.val]]
             else:
+                # 注意这里不要return None,否则找到符合要求的路径后无法返回
                 return []
         # 对左右子树所有结点依次判断
         a = self.findPath(root.left, sum-root.val) + self.findPath(root.right, sum-root.val)

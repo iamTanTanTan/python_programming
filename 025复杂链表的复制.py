@@ -66,7 +66,7 @@ print(S1.clone(node1))
 print(S2.clone(node1))
 
 
-# 
+# 方法三
 class Solution3:
     # 返回 RandomListNode
     def clone(self, head):

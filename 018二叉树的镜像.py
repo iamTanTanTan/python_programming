@@ -19,8 +19,8 @@ class Solution:
         
         root.left, root.right = root.right, root.left #交换根节点的左右子树root.left和root.right
         
-        self.mirror(root.left) #交换root.left的子树
-        self.mirror(root.right) #交换root.right的子树
+        self.mirror(root.left) #递归左子树
+        self.mirror(root.right) #递归右子树
                 
 pNode1 = TreeNode(8)
 pNode2 = TreeNode(6)

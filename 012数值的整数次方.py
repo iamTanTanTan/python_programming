@@ -4,8 +4,7 @@
 给定一个double类型的浮点数base和int类型的整数exponent。求base的exponent次方
 '''
 '''
-和C，C++ 等语言不一样，python内置了求幂运算符**，可以直接实现，没必要按照C的思路实现
-'''
+和C，C++ 等语言不一样，python内置了求幂运算符**，可以直接实现
 
 class Solution:
     def Power(self, base, exponent=2): # 默认输出二次方结果

@@ -3,18 +3,36 @@
 '''
 给定一个double类型的浮点数base和int类型的整数exponent。求base的exponent次方
 '''
-'''
-和C，C++ 等语言不一样，python内置了求幂运算符**，可以直接实现
+
 
 class Solution:
-    # 默认输出二次方结果
-    def Power(self, base, exponent=2): 
+    # 方法一
+    def power1(self, base, exponent): 
         # write code here
         return base**exponent
-    
+
+    # 方法二
+    def power2(self, base, exponent):
+        if exponent == 0:
+            return 1
+        elif exponent == 1:
+            return base
+        
+        result = 1
+        for _ in range(abs(exponent)):
+            if exponent < 0:
+                result = 1 / (result * base)
+            else:
+                result = result * base
+            
+        return result
+
 test = Solution()
-print(test.Power(0, 0))
-print(test.Power(-2, 4))
-print(test.Power(-2, 5))
-print(test.Power(-2, -1))
-print(test.Power(9))
+print(test.power1(0, 0))
+print(test.power1(-2, 1))
+print(test.power1(2, 5))
+print(test.power1(-2, -1))
+print(test.power2(0, 0))
+print(test.power2(-2, 1))
+print(test.power2(2, 5))
+print(test.power2(-2, -1))

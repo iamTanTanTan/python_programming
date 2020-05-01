@@ -4,7 +4,6 @@
 因为它包含因子7。 习惯上我们把1当做第一个丑数。
 '''
 
-
 class Solution:
     # 获取第index个丑数
     def get_ugly_num(self, index):

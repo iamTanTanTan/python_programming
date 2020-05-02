@@ -23,7 +23,7 @@ class Solution:
         # 若目标元素在nums中存在
         if k in nums[lo:lo+1]:
             # 当nums[lo]等于目标元素，则依次循环判断
-            # 当nums[lo]不等于目标元素时，循环结束
+            # 直到nums[lo]不等于目标元素时，循环结束
             count = 0
             while nums[lo] == k:
                 count += 1

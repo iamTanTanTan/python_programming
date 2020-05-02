@@ -22,7 +22,7 @@ class Solution:
         lo = bisect_left(nums, k)
         # 若目标元素在nums中存在
         if k in nums[lo:lo+1]:
-            # 当nums[lo]等于目标元素，则依次循环判断
+            # 当nums[lo]等于目标元素，则依循环累加计数器
             # 直到nums[lo]不等于目标元素时，循环结束
             count = 0
             while nums[lo] == k:
@@ -36,6 +36,6 @@ class Solution:
 
 s = Solution()
 print(s.number_of_k1([1, 3, 3, 4, 5], 3))
-print(s.number_of_k2([1, 3, 3, 4, 5], 3))
 print(s.number_of_k1([], 1))
+print(s.number_of_k2([1, 3, 3, 4, 5], 3))
 print(s.number_of_k2([], 1))

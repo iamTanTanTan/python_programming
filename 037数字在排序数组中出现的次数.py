@@ -19,12 +19,12 @@ class Solution:
             return 0
 
         # 定位目标元素可能的最左侧位置lo
-        lo = bisect_left(nums, k)
+        left = bisect_left(nums, k)
         # 若目标元素在nums中存在
-        if k in nums[lo:lo+1]:
+        if k in nums[left:left+1]:
             # 定位目标元素从lo起最右侧边界
-            hi = bisect_right(nums[lo:], k)
-            return hi
+            right = bisect_right(nums[left:], k)
+            return right
 
         else:
             return 0

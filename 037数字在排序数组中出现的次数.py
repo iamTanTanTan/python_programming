@@ -2,7 +2,7 @@
 统计一个数字在排序数组中出现的次数。
 '''
 
-from bisect import bisect_left
+from bisect import bisect_left, bisect_right
 
 
 class Solution:
@@ -18,17 +18,13 @@ class Solution:
         if not nums:
             return 0
 
-        # 定位目标元素可能的最左侧位置
+        # 定位目标元素可能的最左侧位置lo
         lo = bisect_left(nums, k)
         # 若目标元素在nums中存在
         if k in nums[lo:lo+1]:
-            # 当nums[lo]等于目标元素，则依循环累加计数器
-            # 直到nums[lo]不等于目标元素时，循环结束
-            count = 0
-            while nums[lo] == k:
-                count += 1
-                lo += 1
-            return count
+            # 定位目标元素从lo起最右侧边界
+            hi = bisect_right(nums[lo:], k)
+            return hi
 
         else:
             return 0

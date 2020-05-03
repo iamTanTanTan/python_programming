@@ -36,7 +36,7 @@ class Solution:
         for i in range(len_diff):
             long = long.next
 
-        # 两个链表同时遍历,直到为空或者找到相等结束
+        # 两个链表同时遍历,直到为空或者找到第一个公共结点结束
         while short != None and long != None and short != long:
             short = short.next
             long = long.next

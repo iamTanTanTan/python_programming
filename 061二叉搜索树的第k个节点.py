@@ -28,7 +28,7 @@ class Solution:
 
     # 方法一
 
-     def kth_node1(self, root, k):
+    def kth_node1(self, root, k):
         if not root:
             return None
 

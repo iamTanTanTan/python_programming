@@ -35,7 +35,7 @@ class Solution:
                 elif rotateArray[mid] < rotateArray[rear]:
                     rear = mid
                 elif rotateArray[mid] == rotateArray[rear] and rotateArray[front] == rotateArray[rear]:
-                     for i in range(1, len(rotateArray)): #不包括front和rear
+                     for i in range(1, len(rotateArray)): 
                         if rotateArray[i] < minVal:
                             minVal = rotateArray[i]
                             rear = i
